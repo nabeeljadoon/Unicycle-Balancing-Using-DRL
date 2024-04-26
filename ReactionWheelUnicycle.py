@@ -9,26 +9,7 @@ import numpy as np
 
 class Unicycle:
     """
-    unicycle class: The unicycle.py program is a Python script that contains a class definition for a unicycle model. The Unicycle class takes several parameters during initialization, such as whether to render the simulation, whether to use continuous or discrete actions, the time step of the simulation, the standard deviation of the initial position and velocity, the height of the ground, the radius of the ground, and whether to get an image of the environment.
-
-The _build_model method is responsible for creating the unicycle model in the PyBullet physics engine. It creates the collision and visual shapes for each part of the unicycle, and sets up the joints between the different parts of the unicycle.
-
-The img_from_state method is used to generate an image of the environment from a given state. It sets the camera position and orientation to look at the unicycle from a certain distance, and then computes the camera view and projection matrices. It then uses these matrices to capture an image of the environment.
-
-The torque_from_action method is used to convert a given action into torque values for the two wheels. It takes a one-hot encoded action as input and returns the corresponding torque values.
-
-The get_state method is used to get the current state of the unicycle. It returns the position, orientation, velocity, and angular velocity of the center column, as well as the angular velocity of the two wheels. It also checks if the unicycle has fallen down or moved out of bounds, and sets the done flag accordingly.
-
-The reset method is used to reset the unicycle to its initial position and orientation. It sets the position and orientation of the center column and wheels to a random value, and resets the velocities and angular velocities to zero.
-
-The continuous_torque method is used to convert a continuous action into torque values for the two wheels. It scales the input values to a suitable range and adds a constant offset to ensure that the wheels are always rotating in the positive direction.
-
-The step method is used to simulate a single step of the unicycle. It takes an action as input and applies the corresponding torque to the wheels. It then simulates a single step of the physics engine and returns the new state of the unicycle, as well as the reward and done flag.
-
-There are also several other methods and functions defined in the file, but they are not currently being used in the program.
-
-Overall, the unicycle.py program provides a flexible and customizable interface for simulating a unicycle in the PyBullet physics engine. It can be used for a variety of tasks, such as reinforcement learning, control, and motion planning.
-
+    Custom Design Starts From here
     """
     def __init__(self, render=False, continuous=False, time_step=1./30, sigma=0.2, down=1.0, floor_r=7, get_image=False):
         self.time_step = time_step
