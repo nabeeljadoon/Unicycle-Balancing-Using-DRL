@@ -5,10 +5,6 @@
 # 
 # input with 19 coord data
 # output with 4 torque for one-hot
-# https://www.tensorflow.org/guide/keras
-# https://keras.io/getting-started/functional-api-guide/
-
-# https://jaromiru.com/2016/10/03/lets-make-a-dqn-implementation/
 
 
 import numpy as np
